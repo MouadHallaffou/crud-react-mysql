@@ -22,7 +22,7 @@ export default function PostIndex() {
             <div className="container mx-auto mt-8">
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-2xl font-bold">Posts Management</h1>
-                <Link to="/create" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                <Link to="/createPost" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                 Create New Post
                 </Link>
             </div>
@@ -45,15 +45,15 @@ export default function PostIndex() {
                     <td className="border border-gray-300 px-4 py-2">{post.body}</td>
                     <td className="border border-gray-300 px-4 py-2">{post.created_at}</td>
                     <td className="border border-gray-300 px-4 py-2 flex justify-center">
-                    <button className="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 mr-2">
+                    <Link to={`/editPost/${post.id}`} className="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 mr-2">
                         Edit
-                    </button>
+                    </Link>
                     <button onClick={() => deletePost(post.id)} className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 mr-2">
                         Delete
                     </button>
-                    <button className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">
+                    <Link to={`showPost/${post.id}`} className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">
                         show
-                    </button>
+                    </Link>
                     </td>
                 </tr>
                     )}

@@ -4,8 +4,8 @@ import axios from "axios";
 
 export default function CreatePost() {
 
-    const [title, setTitle] = useState(' ');
-    const [body, setBody] = useState(' ');
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
     const navigate = useNavigate();
 
     const SubmitEvent = (e: React.FormEvent) => {
